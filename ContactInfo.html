@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Information</title>
+</head>
+<body>
+
+  <p>Registration Form</p>
+  <small>Leave your contact information and any questions you may have. I will get back to you as soon as possible.</small>
+  <hr>
+
+  <form action="/action.php">
+
+    <!-- 1. Name Section -->
+    <div style="margin-bottom: 20px;">
+      <label for="username"><b>Name:</b></label><br>
+      <input type="text" id="username" name="name" placeholder="Type your name" required>
+    </div>
+    <hr>
+
+    <!-- 2. Interest Section -->
+    <div style="margin-bottom: 20px;">
+      <b>Are you interested in Web Development?</b><br>
+      <!-- For a label to be clickable, its 'for' attribute must exactly match the input's 'id'. -->
+      <input type="radio" id="interest_yes" name="Interest" value="Yes">
+      <label for="interest_yes">Yes</label><br>
+      
+      <input type="radio" id="interest_no" name="Interest" value="No">
+      <label for="interest_no">No</label>
+    </div>
+    <hr>
+
+    <!-- 3. Qualification Section -->
+    <div style="margin-bottom: 20px;">
+      <b>Select Qualification:</b><br>
+      <input type="radio" id="ug" name="class" value="Undergraduate">
+      <label for="ug">Undergraduate</label><br>
+
+      <input type="radio" id="grad" name="class" value="Graduate">
+      <label for="grad">Graduate</label><br>
+
+      <input type="radio" id="pg" name="class" value="Post-Graduate">
+      <label for="pg">Post-Graduate</label>
+    </div>
+    <hr>
+
+    <!-- 4. Contact Information -->
+    <div style="margin-bottom: 20px;">
+      <label for="user_mobile"><b>Mobile No.:</b></label><br>
+      <input type="tel" id="user_mobile" name="mobile" placeholder="(+91 XXXXXXXXXX)" pattern="^(\+91[\-\s]?)?[0-9]{10}$" required><br><br>
+
+      <label for="user_email"><b>Email:</b></label><br>
+      <!-- Using type="email" forces the browser to check for an @ symbol -->
+      <input type="email" id="user_email" name="email" placeholder="Enter email address">
+    </div>
+    <hr>
+
+    <!-- 5. Questions Section -->
+    <div style="margin-bottom: 20px;">
+      <label for="user_questions"><b>Any other questions?</b></label><br>
+      <textarea id="user_questions" name="questions" placeholder="Type your questions here..." rows="4" cols="40"></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <div>
+      <button type="submit">Submit</button>
+    </div>
+
+  </form>
+
+</body>
+</html>
